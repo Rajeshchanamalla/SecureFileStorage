@@ -1,7 +1,7 @@
 import os
-#import Crypto
-#from Crypto.Cipher import Blowfish
-#from Crypto.Util.Padding import pad, unpad
+import Crypto
+from Crypto.Cipher import Blowfish
+from Crypto.Util.Padding import pad, unpad
 
 def blowfish_encrypt(file_path, key):
     key = key.encode('utf-8').ljust(56)[:56]  # Blowfish allows keys up to 56 bytes
